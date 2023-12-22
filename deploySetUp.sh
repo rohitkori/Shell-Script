@@ -2,16 +2,16 @@
 
 # install nginx
 sudo apt-get update
-sudo apt-get install nginx
+echo "Y" | sudo apt-get install nginx
 echo "q" | sudo service nginx status
 
 # install docker
 sudo apt update
-sudo apt install apt-transport-https ca-certificates curl software-properties-common
+echo "Y" | sudo apt install apt-transport-https ca-certificates curl software-properties-common
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
 echo "yes" | sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu focal stable"
 apt-cache policy docker-ce
-sudo apt install docker-ce
+echo "Y" | sudo apt install docker-ce
 echo "q" | sudo systemctl status docker
 
 # install docker-compose
