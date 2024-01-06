@@ -16,6 +16,7 @@ echo "yes" | sudo add-apt-repository "deb [arch=amd64] https://download.docker.c
 apt-cache policy docker-ce
 echo "Y" | sudo apt install docker-ce
 echo "q" | sudo systemctl status docker
+sudo usermod -aG docker ubuntu
 
 # install docker-compose
 sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
