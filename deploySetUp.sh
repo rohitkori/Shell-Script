@@ -1,5 +1,8 @@
 !/usr/bin/bash
 
+# Generate SSH keys for GitHub
+sudo ssh-keygen -t rsa -b 4096 -C "youremail@gmail.com"
+
 # install nginx
 sudo apt-get update
 echo "Y" | sudo apt-get install nginx
