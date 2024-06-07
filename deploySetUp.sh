@@ -14,6 +14,9 @@ apt-cache policy docker-ce
 echo "Y" | sudo apt install docker-ce
 #echo "q" | sudo systemctl status docker
 
+# Execute the docker commands without sudo
+sudo usermod -aG docker ${USER} # Note: have to login again, then only it will work
+
 # install docker-compose
 sudo curl -L "https://github.com/docker/compose/releases/download/1.29.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 sudo chmod +x /usr/local/bin/docker-compose
