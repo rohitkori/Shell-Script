@@ -3,7 +3,7 @@
 # install nginx
 sudo apt-get update
 echo "Y" | sudo apt-get install nginx
-echo "q" | sudo service nginx status
+#echo "q" | sudo service nginx status
 
 # install docker
 sudo apt update
